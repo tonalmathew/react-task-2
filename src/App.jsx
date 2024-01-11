@@ -7,7 +7,8 @@ function App() {
 	const [items, setItems] = useState([]);
 
 	const addItem = () => {
-		setItems([{ directorName, movieName }, ...items]);
+    if(directorName.length<=0 && movieName.length<= 0) return
+    setItems([{ directorName, movieName }, ...items]);
 		setDirectorName("");
 		setMovieName("");
 	};
